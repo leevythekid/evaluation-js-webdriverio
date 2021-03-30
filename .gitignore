@@ -1,3 +1,9 @@
+# Image folder (when test fails)
+allure-*
+
+# HTML files
+/data/*.html
+
 # Logs
 logs
 *.log
