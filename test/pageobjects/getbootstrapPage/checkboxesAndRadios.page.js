@@ -22,7 +22,9 @@ class CheckboxesAndRadios extends Page {
     get exampleRadios3() {
         return $('#exampleRadios3');
     }
-
+    get defaultStacked() {
+        return $('.bd-content-title [href="#default-stacked"]');
+    }
     /**
      * overwrite specifc options to adapt it to page object
      */

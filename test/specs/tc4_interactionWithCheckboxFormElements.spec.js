@@ -19,7 +19,7 @@ describe('TC-4 - Interaction with checkbox form elements', () => {
     });
 
     it('Can check checkbox', () => {
-        $('.bd-content-title [href="#default-stacked"]').scrollIntoView();
+        componentsPage.defaultStacked.scrollIntoView();
         componentsPage.defaultCheck1.click();
         expect(componentsPage.defaultCheck1.getProperty('checked')).to.equal(true);
     });

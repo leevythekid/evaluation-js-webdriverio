@@ -79,3 +79,47 @@ Tests will be executed on:
 1. **When** The option "2" is selected in example select
 1. **Then** The selected option in example select should be "2"
 1. **And** Thu number of options in example select should be 5
+
+
+## `TC-8` Checking social elements
+
+1. **Given** https://angular.io/ URL is opened
+1. **Then** There should be a Twitter icon displayed
+1. **And**  It should have a {href} attribure with value: https://twitter.com/angular
+1. **And** There should be a GitHub icon displayed
+1. **And**  It should have a {href} attribure with value: https://github.com/angular/angular
+1. **And** There should be a YouTube icon displayed
+1. **And**  It should have a {href} attribure with value: https://youtube.com/angular
+
+
+## `TC-9` Checking dropdown elements
+
+1. **Given** https://getbootstrap.com/docs/4.4/components/dropdowns/ URL is opened
+2. **Then** The Dropdown button should be clickable
+3. **And** Dropdown items should not be displayed by default
+4. **When** The Dropdown button is clicked
+5. **Then** The dropdown items should be displayed
+
+
+## `TC-10` Checking the Twitter icon
+
+1. **Given** https://angular.io/ URL is opened
+2. **Then** The Twitter icon should be visible
+3. **When** The Twitter icon is clicked with the mousewheel
+4. **And** Window is switched to https://twitter.com/angular
+5. **Then** The window URL should be https://twitter.com/angular
+
+
+## `TC-11` Checking search bar on Docs page
+
+1. **Given** https://getbootstrap.com/docs/5.0/getting-started/introduction/ URL is opened
+2. **When** "config" is typed into the searchbox
+3. **And** 1000ms is waited
+4. **Then** New elements should be displayed with texts that include string "config"
+
+
+## `TC-12`` Checking search bar on Icons page
+
+1. **Given** https://icons.getbootstrap.com/ URL is opened
+2. **When** 'align' is typed into the searchbox
+3. **Then**  Only elements should be visible where the value of the "data-tags" attribute contains 'align'

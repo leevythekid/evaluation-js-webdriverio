@@ -1,4 +1,4 @@
-# Image folder (when test fails)
+# Allure reporter folders
 allure-*
 
 # HTML files

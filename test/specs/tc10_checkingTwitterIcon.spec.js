@@ -1,7 +1,7 @@
 const mainPage = require('../pageobjects/angularPage/main.page');
 const expect = require('chai').expect;
 
-describe("TC-10 - Checking Angular Logo Interractions", () => {
+describe("TC-10 - Checking Twitter Icon Interractions", () => {
     before(() => {
         mainPage.open();
     });
@@ -12,6 +12,7 @@ describe("TC-10 - Checking Angular Logo Interractions", () => {
 
     it('Should open the corresponding page on a new tab if clicked with scrollwheel', () => {
         mainPage.socialElement('Twitter').click({ button: "middle" });
+        console.log('window handles: ' + browser.getWindowHandles())
         browser.switchWindow("https://twitter.com/angular");
         expect(browser.getUrl()).to.equal("https://twitter.com/angular")
     });

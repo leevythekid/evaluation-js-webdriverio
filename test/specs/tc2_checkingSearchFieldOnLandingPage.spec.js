@@ -3,7 +3,7 @@ const expect = require('chai').expect;
 
 describe('TC-2 - Checking search field on landing page', () => {
     before(() => {
-        browser.url('https://angular.io');
+        mainPage.open();
     });
 
     it('Search input visible in the nav bar', () => {
@@ -22,7 +22,7 @@ describe('TC-2 - Checking search field on landing page', () => {
         it('Proper suggestion result', () => {
             mainPage.search.setValue('Directive');
             $('.search-result-item').waitForExist();
-            expect($$('.search-result-item')[0].getText()).to.include('Directive');
+            expect($$('.search-result-item')[1].getText()).to.include('Directive');
         });
     });
     describe('Search results', () => {
