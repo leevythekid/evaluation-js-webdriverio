@@ -6,23 +6,23 @@ describe('TC-5 - Interaction with radio form elements', () => {
         componentsPage.open();
     });
 
-    it('Have enabled radio', () => {
+    it('"Default radio" should be enabled', () => {
         expect(componentsPage.exampleRadios1.isEnabled()).to.equal(true);
     });
 
-    it('Have disabled radio', () => {
+    it('"Disabled radio" should be disabled', () => {
         expect(componentsPage.exampleRadios3.isEnabled()).to.equal(false);
     });
 
-    it('Have selected radio', () => {
+    it('"Default radio" should be selected', () => {
         expect(componentsPage.exampleRadios1.getProperty('checked')).to.equal(true);
     });
 
-    it('Have not selected radio', () => {
+    it('"Second default radio" should not be selected', () => {
         expect(componentsPage.exampleRadios2.getProperty('checked')).to.equal(false);
     });
 
-    it('Is able to select radio', () => {
+    it('Should be able to select radio', () => {
         browser.execute(() => {
             $("header").hide();
         });

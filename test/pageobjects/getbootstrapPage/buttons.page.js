@@ -2,7 +2,7 @@ const Page = require('./page')
 
 class Buttons extends Page {
     get primaryButton() {
-        return $('button=Primary button');
+        return $('button.btn-primary[disabled=""]');
     }
     get activeButton() {
         return $('.btn-primary.active');

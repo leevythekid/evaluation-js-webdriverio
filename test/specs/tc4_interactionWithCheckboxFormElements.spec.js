@@ -6,19 +6,19 @@ describe('TC-4 - Interaction with checkbox form elements', () => {
         componentsPage.open();
     });
 
-    it('Have enabled checkbox', () => {
+    it('Should have enabled checkbox', () => {
         expect(componentsPage.defaultCheck1.isEnabled()).to.equal(true);
     });
 
-    it('Have disabled checkbox', () => {
+    it('Should have disabled checkbox', () => {
         expect(componentsPage.defaultCheck2.isEnabled()).to.equal(false);
     });
 
-    it('Have unchecked checkbox', () => {
+    it('Should have unchecked checkbox', () => {
         expect(componentsPage.defaultCheck1.getProperty('checked')).to.equal(false);
     });
 
-    it('Can check checkbox', () => {
+    it('Should be able to check checkbox', () => {
         componentsPage.defaultStacked.scrollIntoView();
         componentsPage.defaultCheck1.click();
         expect(componentsPage.defaultCheck1.getProperty('checked')).to.equal(true);

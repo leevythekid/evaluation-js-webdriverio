@@ -1,5 +1,4 @@
 const Page = require('./page');
-const DocsPage = require('./docs.page');
 
 /**
  * sub page containing specific selectors and methods for a specific page
@@ -37,7 +36,6 @@ class MainPage extends Page {
 
     clickGetStartedButton() {
         this.getStartedButton.click();
-        return DocsPage;
     }
 }
 

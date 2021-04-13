@@ -6,20 +6,20 @@ describe('TC-3 - Checking form elements', () => {
         componentsPage.open();
     });
 
-    it('Browser title is "Forms · Bootstrap"', () => {
+    it('Browser title should be "Forms · Bootstrap"', () => {
         expect(browser.getTitle()).to.equal('Forms · Bootstrap');
     });
 
-    it('Readonly input is not displayed in viewport', () => {
+    it('Readonly input should not be displayed in viewport', () => {
         expect(componentsPage.readonlyInput.isDisplayedInViewport()).to.equal(false);
     });
 
-    it('Readonly input in viewport after scroll', () => {
+    it('Readonly input should be in viewport after scroll', () => {
         componentsPage.readonlyInput.scrollIntoView();
         expect(componentsPage.readonlyInput.isDisplayedInViewport()).to.equal(true);
     });
 
-    it('Readonly input is readonly', () => {
+    it('Readonly input should be readonly', () => {
         expect(componentsPage.readonlyInput.getProperty('readOnly')).to.equal(true);
     });
 });

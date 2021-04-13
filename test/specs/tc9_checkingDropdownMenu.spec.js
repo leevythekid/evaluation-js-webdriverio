@@ -6,7 +6,7 @@ describe('TC-9 - Interaction with dropdown elements', () => {
         dropdownPage.open();
     });
 
-    it('Dropdown button is clickable', () => {
+    it('Dropdown button should be clickable', () => {
         expect(dropdownPage.dropdownButton.isClickable()).to.equal(true);
     });
 

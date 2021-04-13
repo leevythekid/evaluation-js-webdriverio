@@ -6,15 +6,15 @@ describe('TC-6 - Checking button form elements', () => {
         buttonPage.open();
     });
 
-    it('Have primary button', () => {
+    it('Should have "Primary button"', () => {
         expect(buttonPage.primaryButton.isExisting()).to.equal(true);
     });
 
-    it('Have disabled button', () => {
+    it('"Primary button" should be disabled', () => {
         expect(buttonPage.primaryButton.isEnabled()).to.equal(false);
     });
 
-    it('Have not disabled button', () => {
+    it('"Primary link" button should be enabled', () => {
         buttonPage.activeButton.scrollIntoView();
         expect(buttonPage.activeButton.isClickable()).to.equal(true);
     });

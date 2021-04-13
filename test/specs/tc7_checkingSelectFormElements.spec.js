@@ -6,32 +6,32 @@ describe('TC-7 - Checking select form elements', () => {
         formPage.open()
     });
 
-    it('Have simple select', () => {
+    it('Should have simple select', () => {
         expect(formPage.exampleSelect1.isDisplayed()).to.equal(true);
     });
 
-    it('Have multi-select', () => {
+    it('Should have multi-select', () => {
         expect(formPage.exampleSelect2.getProperty('multiple')).to.equal(true);
     });
 
-    it('Have proper selected value', () => {
+    it('Should have proper selected value by default', () => {
         expect(formPage.exampleSelect1.getProperty('value')).to.equal('1');
     });
 
-    it('Not have given option', () => {
+    it('Should not have given option "Hello"', () => {
         expect(formPage.exampleSelect1.$('option=Hello').isExisting()).to.equal(false);
     });
 
-    it('Have given option', () => {
+    it('Should have given option "2"', () => {
         expect(formPage.exampleSelect1.getProperty('2')).to.be.ok;
     });
 
-    it('Select value', () => {
-        const select = formPage.exampleSelect1.selectByVisibleText('2');
+    it('Should be able to select a value in simple select', () => {
+        formPage.exampleSelect1.selectByVisibleText('2');
         expect(formPage.exampleSelect1.getProperty('value')).to.equal('2');
     });
 
-    it('Have all options', () => {
+    it('Should have all options', () => {
         expect(formPage.exampleSelect1.getProperty('length')).to.equal(5);
     });
 });

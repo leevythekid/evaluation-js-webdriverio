@@ -95,31 +95,31 @@ Tests will be executed on:
 ## `TC-9` Checking dropdown elements
 
 1. **Given** https://getbootstrap.com/docs/4.4/components/dropdowns/ URL is opened
-2. **Then** The Dropdown button should be clickable
-3. **And** Dropdown items should not be displayed by default
-4. **When** The Dropdown button is clicked
-5. **Then** The dropdown items should be displayed
+1. **Then** The Dropdown button should be clickable
+1. **And** Dropdown items should not be displayed by default
+1. **When** The Dropdown button is clicked
+1. **Then** The dropdown items should be displayed
 
 
 ## `TC-10` Checking the Twitter icon
 
 1. **Given** https://angular.io/ URL is opened
-2. **Then** The Twitter icon should be visible
-3. **When** The Twitter icon is clicked with the mousewheel
-4. **And** Window is switched to https://twitter.com/angular
-5. **Then** The window URL should be https://twitter.com/angular
+1. **Then** The Twitter icon should be visible
+1. **When** The Twitter icon is clicked with the mousewheel
+1. **And** Window is switched to https://twitter.com/angular
+1. **Then** The window URL should be https://twitter.com/angular
 
 
 ## `TC-11` Checking search bar on Docs page
 
 1. **Given** https://getbootstrap.com/docs/5.0/getting-started/introduction/ URL is opened
-2. **When** "config" is typed into the searchbox
-3. **And** 1000ms is waited
-4. **Then** New elements should be displayed with texts that include string "config"
+1. **When** "config" is typed into the searchbox
+1. **And** 1000ms is waited
+1. **Then** New elements should be displayed with texts that include string "config"
 
 
-## `TC-12`` Checking search bar on Icons page
+## `TC-12` Checking search bar on Icons page
 
 1. **Given** https://icons.getbootstrap.com/ URL is opened
-2. **When** 'align' is typed into the searchbox
-3. **Then**  Only elements should be visible where the value of the "data-tags" attribute contains 'align'
+1. **When** 'align' is typed into the searchbox
+1. **Then**  Only elements should be visible where the value of the "data-tags" attribute contains 'align'
