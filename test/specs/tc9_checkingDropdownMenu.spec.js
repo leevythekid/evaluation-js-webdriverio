@@ -1,5 +1,5 @@
-const expect = require('chai').expect;
 const dropdownPage = require('../pageobjects/getbootstrapPage/dropdowns.page');
+
 
 describe('TC-9 - Interaction with dropdown elements', () => {
     beforeEach(() => {

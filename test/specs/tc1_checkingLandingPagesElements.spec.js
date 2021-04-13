@@ -1,7 +1,6 @@
-const mainPage = require('../pageobjects/angularPage/main.page');
 const docsPage = require('../pageobjects/angularPage/docs.page');
 const environments = require('../../data/environments.json')
-const expect = require('chai').expect;
+const mainPage = require('../pageobjects/angularPage/main.page');
 
 
 describe('TC-1 - Checking Landing Pages Elements', () => {

@@ -1,5 +1,4 @@
 const iconPage = require('../pageobjects/getbootstrapPage/icon.page');
-const expect = require('chai').expect;
 
 describe("TC-12 - Checking Search bar on Icons page", () => {
     before(() => {

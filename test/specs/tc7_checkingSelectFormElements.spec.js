@@ -1,5 +1,5 @@
-const expect = require('chai').expect;
 const formPage = require('../pageobjects/getbootstrapPage/forms.page');
+
 
 describe('TC-7 - Checking select form elements', () => {
     beforeEach(() => {

@@ -1,6 +1,6 @@
 const mainPage = require('../pageobjects/angularPage/main.page');
 const URLs = require('../../data/URLs.json')
-const expect = require('chai').expect;
+
 
 describe("TC-10 - Checking Twitter Icon Interractions", () => {
     before(() => {

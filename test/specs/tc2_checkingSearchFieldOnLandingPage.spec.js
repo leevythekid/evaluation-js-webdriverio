@@ -1,8 +1,8 @@
-const mainPage = require('../pageobjects/angularPage/main.page');
 const directive = require('../pageobjects/angularPage/directive.page');
-const searchPage = require('../pageobjects/angularPage/searchResult.page');
 const environments = require('../../data/environments.json')
-const expect = require('chai').expect;
+const mainPage = require('../pageobjects/angularPage/main.page');
+const searchPage = require('../pageobjects/angularPage/searchResult.page');
+
 
 describe('TC-2 - Checking search field on landing page', () => {
     before(() => {

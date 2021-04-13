@@ -1,5 +1,5 @@
 const componentsPage = require('../pageobjects/getbootstrapPage/checkboxesAndRadios.page');
-const expect = require('chai').expect;
+
 
 describe('TC-4 - Interaction with checkbox form elements', () => {
     beforeEach(() => {
