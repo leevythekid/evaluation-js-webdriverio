@@ -7,6 +7,7 @@ describe("TC-12 - Checking Search bar on Icons page", () => {
 
     it('Should return the items where the value of the "data-tags" attribute contains the given string', function () {
         iconPage.inputField.setValue('align');
+        iconPage.searchItem.waitForExist();
 
         if (iconPage.searchItems.length > 0) {
             iconPage.searchItems.forEach((element, index) => {

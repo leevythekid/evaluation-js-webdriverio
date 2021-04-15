@@ -2,7 +2,7 @@ const dropdownPage = require('../pageobjects/getbootstrapPage/dropdowns.page');
 
 
 describe('TC-9 - Interaction with dropdown elements', () => {
-    beforeEach(() => {
+    before(() => {
         dropdownPage.open();
     });
 
@@ -22,6 +22,4 @@ describe('TC-9 - Interaction with dropdown elements', () => {
         expect(dropdownPage.dropdownItem2.isDisplayed()).to.equal(true);
         expect(dropdownPage.dropdownItem3.isDisplayed()).to.equal(true);
     });
-
-
 });

@@ -9,7 +9,7 @@ describe("TC-11 - Checking Search bar on Doc page", () => {
 
     it('Search dropdown should include the given word', () => {
         docPage.inputField.setValue('config');
-        docPage.searchItem.waitForExist({ timeout: 5000 });
+        docPage.searchItem.waitForExist();
 
         let dsdataset1 = $('.ds-dataset-1').getHTML();
         utils.writeToFile(dsdataset1, 'data/ds-dataset-1.html');
