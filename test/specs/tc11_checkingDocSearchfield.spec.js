@@ -15,7 +15,7 @@ describe("TC-11 - Checking Search bar on Doc page", () => {
         utils.writeToFile(dsdataset1, 'data/ds-dataset-1.html');
 
         docPage.searchItems.forEach((element) => {
-            expect(element.getText().toLowerCase()).to.include('config');
+            expect(element).toHaveTextContaining('config', {ignoreCase: true});
         });
     });
 });

@@ -9,19 +9,19 @@ describe('TC-1 - Checking Landing Pages Elements', () => {
     });
 
     it('Angular Logo in the navbar should be visible', () => {
-        expect(mainPage.angularLogoNavBar.isDisplayedInViewport()).to.equal(true);
+        expect(mainPage.angularLogoNavBar).toBeDisplayedInViewport();
     });
 
     it('Angular Logo in the hero section should be visible', () => {
-        expect(mainPage.angularLogoHeroSection.isDisplayedInViewport()).to.equal(true);
+        expect(mainPage.angularLogoHeroSection).toBeDisplayedInViewport();
     });
 
     it('Proper headline in hero section', () => {
-        expect(mainPage.heroHeadline.getText()).to.include('The modern web\ndeveloper\'s platform');
+        expect(mainPage.heroHeadline).toHaveText('The modern web\ndeveloper\'s platform');
     });
 
     it('Get started button should be clickable', () => {
-        expect(mainPage.getStartedButton.isClickable()).to.equal(true);
+        expect(mainPage.getStartedButton).toBeClickable();
     });
 
     describe('Get Started Page', () => {
@@ -30,10 +30,10 @@ describe('TC-1 - Checking Landing Pages Elements', () => {
             docsPage.title.waitForDisplayed();
         });
         it(`URL should be ${environments.ANGULAR_URL}docs`, () => {
-            expect(docsPage.getUrl()).to.equal(`${environments.ANGULAR_URL}docs`);
+            expect(docsPage.getUrl()).toBe(`${environments.ANGULAR_URL}docs`);
         });
         it('Title should be "Introduction to the Angular Docs"', () => {
-            expect(docsPage.title.getText()).to.equal('Introduction to the Angular Docs');
+            expect(docsPage.title).toHaveText('Introduction to the Angular Docs');
         });
     });
 });

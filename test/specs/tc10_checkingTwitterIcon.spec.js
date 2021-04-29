@@ -8,13 +8,13 @@ describe("TC-10 - Checking Twitter Icon Interractions", () => {
     });
 
     it('Twitter icon should be displayed', () => {
-        expect(mainPage.socialElement("Twitter").isDisplayedInViewport()).to.equal(true);
+        expect(mainPage.socialElement("Twitter")).toBeDisplayedInViewport();
     });
 
     it('Should open the corresponding page on a new tab if clicked with scrollwheel', () => {
         mainPage.socialElement('Twitter').click({ button: "middle" });
 
         browser.switchWindow(URLs.TWITTER);
-        expect(browser.getUrl()).to.equal(URLs.TWITTER)
+        expect(browser).toHaveUrl(URLs.TWITTER)
     });
 });

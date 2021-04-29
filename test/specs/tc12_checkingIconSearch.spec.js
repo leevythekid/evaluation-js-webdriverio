@@ -11,10 +11,10 @@ describe("TC-12 - Checking Search bar on Icons page", () => {
 
         if (iconPage.searchItems.length > 0) {
             iconPage.searchItems.forEach((element, index) => {
-                expect(element.getAttribute('data-tags'), `Error happend at "li" index: ${index}`).to.include('align');
+                expect(element).toHaveAttributeContaining('data-tags', 'align');
             });
+        } else {
+            return this.skip();
         }
-
-        this.skip();
     });
 });

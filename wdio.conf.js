@@ -182,12 +182,12 @@ exports.config = {
      * @param {Array.<String>} specs        List of spec file paths that are to be run
      * @param {Object}         browser      instance of created browser/device session
      */
-    before: () => {
-        require('expect-webdriverio');
-        global.wdioExpect = global.expect;
-        const chai = require('chai');
-        global.expect = chai.expect;
-    },
+    //before: () => {
+    //    require('expect-webdriverio');
+    //    global.wdioExpect = global.expect;
+    //    const chai = require('chai');
+    //    global.expect = chai.expect;
+    //},
     /**
      * Runs before a WebdriverIO command gets executed.
      * @param {String} commandName hook command name

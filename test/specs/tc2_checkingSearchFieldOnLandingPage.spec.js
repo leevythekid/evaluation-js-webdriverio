@@ -10,15 +10,15 @@ describe('TC-2 - Checking search field on landing page', () => {
     });
 
     it('Search input should be visible in the nav bar', () => {
-        expect(mainPage.search.isDisplayed()).to.equal(true);
+        expect(mainPage.search).toBeDisplayed;
     });
 
     it('Search input should be empty by default', () => {
-        expect(mainPage.search.getText()).to.equal('');
+        expect(mainPage.search).toHaveValue('');
     });
 
     it('Proper placehodleer should be in search input', () => {
-        expect(mainPage.search.getAttribute('placeholder')).to.equal('Search');
+        expect(mainPage.search).toHaveAttribute('placeholder', 'Search');
     });
 
     describe('Search suggestions', () => {
@@ -30,7 +30,7 @@ describe('TC-2 - Checking search field on landing page', () => {
             searchPage.searchResultItems.forEach(element => {
                 arr.push(element.getText());
             });
-            expect(arr).to.include('Directive');
+            expect(arr).toContain('Directive');
         });
     });
     describe('Search results', () => {
@@ -40,12 +40,12 @@ describe('TC-2 - Checking search field on landing page', () => {
             searchPage.directiveSpan.click();
         });
         it('Should have proper URL to be redirected to', () => {
-            expect(browser.getUrl()).to.equal(`${environments.ANGULAR_URL}api/core/Directive`);
+            expect(browser.getUrl()).toBe(`${environments.ANGULAR_URL}api/core/Directive`);
         });
 
         it('Should have proper page title', () => {
             directive.h1.waitForDisplayed();
-            expect(directive.h1Directive.getText()).to.include('Directive');
+            expect(directive.h1Directive).toHaveTextContaining('Directive');
         });
     });
 });
