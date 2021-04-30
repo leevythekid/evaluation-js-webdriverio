@@ -9,79 +9,35 @@ describe('TC-11 - Checking social elements', () => {
     });
 
     const testData = [
-        {siteName: 'Github', expectedHref: URLs.BOOTSTRAP_GITHUB},
-        {siteName: 'Twitter', expectedHref: URLs.BOOTSTRAP_TWITTER},
-        {siteName: 'Slack', expectedHref: URLs.BOOTSTRAP_SLACK},
-        {siteName: 'Opencollective', expectedHref: URLs.BOOTSTRAP_OPENCOLLECTIVE}
-    ]
-    
-    const action = [
-        {name: 'left-click', value: {button: 'left'}},
-        {name: 'middle-click', value: {button: 'middle'}}
+        { siteName: 'Github', expectedHref: URLs.BOOTSTRAP_GITHUB },
+        { siteName: 'Twitter', expectedHref: URLs.BOOTSTRAP_TWITTER },
+        { siteName: 'Slack', expectedHref: URLs.BOOTSTRAP_SLACK },
+        { siteName: 'Opencollective', expectedHref: URLs.BOOTSTRAP_OPENCOLLECTIVE }
     ]
 
-    testData.forEach(({siteName, expectedHref}) => {
-        it(`${siteName} icon should be displayed`, function() {
+    const mouseAction = [
+        { name: 'left-click', value: { button: 'left' } },
+        { name: 'middle-click', value: { button: 'middle' } }
+    ]
+
+    testData.forEach(({ siteName, expectedHref }) => {
+        it(`TC-11#1 ${siteName} icon should be displayed and have proper href value`, function () {
             expect(mainPage.getSocialElement(siteName)).toBeDisplayed();
+            expect(mainPage.getSocialElement(siteName).$('a')).toHaveAttribute('href', expectedHref);
         })
 
-        it(`${siteName} icon should point to the corresponding page`, ()  => {
-            expect(mainPage.getSocialElement(siteName).$('a')).toHaveAttribute('href', expectedHref);
-        });
-
-
-
-        action.forEach(({name, value}) => {
-            it(`${siteName} icon should open the corresponding page on a new tab if clicked with ${name}`, () => {
+        mouseAction.forEach(({ name, value }) => {
+            it(`TC-11#2 ${siteName} icon should open the corresponding page on a new tab if clicked with ${name}`, () => {
                 mainPage.getSocialElement(siteName).click(value);
                 browser.switchWindow(expectedHref);
-    
+
                 expect(browser).toHaveUrl(expectedHref)
                 //browser.execute(() => window.close())
+                //browser.pause(2000)
+                //browser.closeWindow()
                 browser.switchWindow(environments.BOOTSTRAP_URL)
             });
         });
-        
+
     });
-
-    /* it('GitHub icon should be displayed', () => {
-        expect(mainPage.githubLogo).toBeDisplayed();
-    });
-
-    it('GitHub icon should point to the corresponding page', () => {
-        expect(mainPage.githubLogo.$('a')).toHaveAttributeContaining('href', URLs.BOOTSTRAP_GITHUB)
-    });
-
-    it('GitHub icon should open the corresponding page on a new tab if clicked with left-click', () => {
-        mainPage.githubLogo.click({button: 'left'})
-        browser.switchWindow(URLs.BOOTSTRAP_GITHUB);
-
-        expect(browser).toHaveUrl(URLs.BOOTSTRAP_GITHUB)
-        //browser.execute(() => window.close())
-        browser.switchWindow(environments.BOOTSTRAP_URL)
-    });
-
-    it('Twitter icon should be displayed', () => {
-        expect(mainPage.twitterLogo).toBeDisplayed();
-    });
-
-    it('Twitter icon should point to the corresponding page', () => {
-        expect(mainPage.twitterLogo.$('a')).toHaveAttributeContaining('href', URLs.BOOTSTRAP_TWITTER)
-    });
-
-    it('Slack icon should be displayed', () => {
-        expect(mainPage.slackLogo).toBeDisplayed();
-    });
-
-    it('Slack icon should point to the corresponding page', () => {
-        expect(mainPage.slackLogo.$('a')).toHaveAttributeContaining('href', URLs.BOOTSTRAP_SLACK)
-    });
-
-    it('Opencollective icon should be displayed', () => {
-        expect(mainPage.opencollectiveLogo).toBeDisplayed();
-    });
-
-    it('Opencollective icon should point to the corresponding page', () => {
-        expect(mainPage.opencollectiveLogo.$('a')).toHaveAttributeContaining('href', URLs.BOOTSTRAP_OPENCOLLECTIVE)
-    }); */
 });

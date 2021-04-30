@@ -12,10 +12,14 @@ describe("TC-8 - Checking Twitter Icon Interractions", () => {
         expect(mainPage.socialElement("Twitter")).toBeDisplayedInViewport();
     });
 
+    it('Twitter icon should be clickable', () => {
+        expect(mainPage.socialElement("Twitter")).toBeClickable();
+    });
+
     it('Should open the corresponding page on a new tab if clicked with scrollwheel', () => {
         mainPage.socialElement('Twitter').click({ button: "middle" });
 
-        browser.switchWindow(URLs.TWITTER);
-        expect(browser).toHaveUrl(URLs.TWITTER)
+        browser.switchWindow(URLs.ANGULAR_TWITTER);
+        expect(browser).toHaveUrl(URLs.ANGULAR_TWITTER)
     });
 });

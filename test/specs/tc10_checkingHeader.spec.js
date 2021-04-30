@@ -6,11 +6,11 @@ describe('TC-10 Header visiblility', () => {
         dropdownPage.open()
     });
 
-    it('Should be displayed by default', () => {
+    it('TC-10#1 Should be displayed by default', () => {
         expect(mainPage.navBar).toBeDisplayedInViewport();
     });
 
-    it('Should not not be displayed if scrolled out of view', () => {
+    it('TC-10#2 Should not not be displayed if scrolled out of view', () => {
         const navbarSize = mainPage.navBar.getSize('height');
 
         browser.execute((navbarSize) => window.scroll(0, navbarSize), navbarSize);

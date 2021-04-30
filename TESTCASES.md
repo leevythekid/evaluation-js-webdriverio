@@ -81,45 +81,118 @@ Tests will be executed on:
 1. **And** the number of options in example select should be 5
 
 
-## `TC-8` Checking social elements
+## `TC-8` Checking the Twitter icon
 
-1. **Given** https://angular.io/ URL is opened
-1. **Then** there should be a Twitter icon displayed
-1. **And**  it should have a {href} attribure with value: https://twitter.com/angular
-1. **And** there should be a GitHub icon displayed
-1. **And**  it should have a {href} attribure with value: https://github.com/angular/angular
-1. **And** there should be a YouTube icon displayed
-1. **And**  it should have a {href} attribure with value: https://youtube.com/angular
-
-
-## `TC-9` Checking dropdown elements
-
-1. **Given** https://getbootstrap.com/docs/4.4/components/dropdowns/ URL is opened
-1. **Then** the Dropdown button should be clickable
-1. **And** dropdown items should not be displayed by default
-1. **When** the Dropdown button is clicked
-1. **Then** the dropdown items should be displayed
-
-
-## `TC-10` Checking the Twitter icon
-
-1. **Given** https://angular.io/ URL is opened
+1. **Given** the https://angular.io/ URL is opened
 1. **Then** the Twitter icon should be visible
-1. **When** the Twitter icon is clicked with the mousewheel
-1. **And** window is switched to https://twitter.com/angular
-1. **Then** the window URL should be https://twitter.com/angular
+2. **And** the Twitter icon should be clickable
+3. **When** the Twitter icon is clicked with the mousewheel
+4. **And** the window is switched to https://twitter.com/angular
+5. **Then** the window URL should be https://twitter.com/angular
 
 
-## `TC-11` Checking search bar on Docs page
+## `TC-9` Checking search bar on Icons page
 
-1. **Given** https://getbootstrap.com/docs/5.0/getting-started/introduction/ URL is opened
-1. **When** "config" is typed into the searchbox
-2. **And**  maximum 1000ms is waited for the elements to load
-3. **Then** new elements should be displayed with texts that include string "config"
+1. **Given** the https://icons.getbootstrap.com/ URL is opened
+2. **Then** an input field should be dispayed
+3. **And** the input filed should be empty
+4. **When** 'align' string is typed into the searchbox
+5. **Then**  only elements should be visible where the value of the "data-tags" attribute contains 'align'
+
+## `TC-10#1` Checking header visibility
+1. **Given** the https://getbootstrap.com/docs/5.0/components/dropdowns/ URL is opened
+2. **Then** the header should be displayed
 
 
-## `TC-12` Checking search bar on Icons page
+## `TC-10#2` Checking header visibility
+1. **Given** the https://getbootstrap.com/docs/5.0/components/dropdowns/ URL is opened
+2. **When** the page is scrolled down with the size of the header's height
+3. **Then** the header should not be displayed in viewport 
 
-1. **Given** https://icons.getbootstrap.com/ URL is opened
-1. **When** 'align' string is typed into the searchbox
-1. **Then**  only elements should be visible where the value of the "data-tags" attribute contains 'align'
+
+## `TC-11#1` Checking social elements
+1. **Given** the https://getbootstrap.com/docs/5.0/components/dropdowns/ URL is opened
+2. **Then** there should be a *socialPageName* icon displayed
+3. **And** it should have a {href} attribure with value: *socialPageURL*
+
+|socialPageName|socialPageURL                         |
+|--------------|--------------------------------------|
+|GitHub        |https://github.com/twbs               |
+|Twitter       |https://twitter.com/getbootstrap      |
+|Slack         |https://bootstrap-slack.herokuapp.com/|
+|Opencollective|https://opencollective.com/bootstrap  |
+
+
+## `TC-11#2` Checking social elements
+1. **Given** the https://getbootstrap.com/docs/5.0/components/dropdowns/ URL is opened
+3. **When** the *socialPageName* icon is clicked with the *mouseAction* mouse button
+4. **Then** the *socialPageURL* should be opened on a new window
+
+|socialPageName|socialPageURL                         |mouseAction|
+|--------------|--------------------------------------|-----------|
+|GitHub        |https://github.com/twbs               |left       |
+|GitHub        |https://github.com/twbs               |middle     |
+|Twitter       |https://twitter.com/getbootstrap      |middle     |
+|Twitter       |https://twitter.com/getbootstrap      |left       |
+|Slack         |https://bootstrap-slack.herokuapp.com/|left       |
+|Slack         |https://bootstrap-slack.herokuapp.com/|middle     |
+|Opencollective|https://opencollective.com/bootstrap  |left       |
+|Opencollective|https://opencollective.com/bootstrap  |middle     |
+
+
+## `TC-12#1` Checking search field
+
+1. **Given** the https://getbootstrap.com/docs/5.0/components/dropdowns/ URL is opened
+1. **Then** the input field should be displayed
+
+
+## `TC-12#2` Checking search field
+1. **Given** the https://getbootstrap.com/docs/5.0/components/dropdowns/ URL is opened
+4. **Then** by default the input field should be empty
+
+
+## `TC-12#3` Checking search field
+
+1. **Given** the https://getbootstrap.com/docs/5.0/components/dropdowns/ URL is opened
+2. **When** the page is scrolled down by the height of the search field
+3. **Then** the search field should be still visible
+
+
+## `TC-12#4` Checking search field
+
+1. **Given** the https://getbootstrap.com/docs/5.0/components/dropdowns/ URL is opened
+2. **When** the 'config' string is eneted to the input field
+3. **And** {waitForTimeout} milliseconds is waited for elements to appear in the DOM
+4. **Then** all the items appeared in the search result popup should contain the string 'config' case insetively
+
+
+## `TC-13#1` Checking dropdown button
+
+1. **Given** the https://getbootstrap.com/docs/5.0/components/dropdowns/ URL is opened
+2. **Then** the dropdown button should be displayed
+
+
+## `TC-13#2` Checking dropdown button
+
+1. **Given** the https://getbootstrap.com/docs/5.0/components/dropdowns/ URL is opened
+2. **Then** the dropdown button should be clickable
+
+
+## `TC-13#3` Checking dropdown button
+
+1. **Given** the https://getbootstrap.com/docs/5.0/components/dropdowns/ URL is opened
+2. **Then** the dropdownItem1 should not be displayed by default
+3. **And** the dropdownItem2 should not be displayed by default
+4. **And** the dropdownItem3 should not be displayed by default
+
+
+## `TC-13#4` Checking dropdown button
+
+1. **Given** the https://getbootstrap.com/docs/5.0/components/dropdowns/ URL is opened
+2. **When** the dropdown button is clicked with the left mouse button
+3. **Then** the dropdownItem1 should be displayed
+4. **And** the dropdownItem2 should be displayed
+5. **And** the dropdownItem3 should be displayed
+
+
+
