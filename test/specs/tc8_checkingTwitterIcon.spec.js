@@ -2,7 +2,8 @@ const mainPage = require('../pageobjects/angularPage/main.page');
 const URLs = require('../../data/URLs.json')
 
 
-describe("TC-10 - Checking Twitter Icon Interractions", () => {
+
+describe("TC-8 - Checking Twitter Icon Interractions", () => {
     before(() => {
         mainPage.open();
     });

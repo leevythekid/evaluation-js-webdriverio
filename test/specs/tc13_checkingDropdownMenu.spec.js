@@ -1,7 +1,7 @@
 const dropdownPage = require('../pageobjects/getbootstrapPage/dropdowns.page');
 
 
-describe('TC-9 - Interaction with dropdown elements', () => {
+describe('TC-13 - Interaction with dropdown elements', () => {
     before(() => {
         dropdownPage.open();
     });

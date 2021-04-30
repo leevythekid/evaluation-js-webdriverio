@@ -1,6 +1,6 @@
 const iconPage = require('../pageobjects/getbootstrapPage/icon.page');
 
-describe("TC-12 - Checking Search bar on Icons page", () => {
+describe("TC-9 - Checking Search bar on Icons page", () => {
     before(() => {
         iconPage.open();
     });
