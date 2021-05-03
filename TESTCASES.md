@@ -99,66 +99,66 @@ Tests will be executed on:
 4. **When** 'align' string is typed into the searchbox
 5. **Then**  only elements should be visible where the value of the "data-tags" attribute contains 'align'
 
-## `TC-10#1` Checking header visibility
+## `TC-01` Checking header visibility
 1. **Given** the https://getbootstrap.com/docs/5.0/components/dropdowns/ URL is opened
 2. **Then** the header should be displayed
 
 
-## `TC-10#2` Checking header visibility
+## `TC-02` Checking header visibility after scroll down
 1. **Given** the https://getbootstrap.com/docs/5.0/components/dropdowns/ URL is opened
 2. **When** the page is scrolled down with the size of the header's height
 3. **Then** the header should not be displayed in viewport 
 
 
-## `TC-11#1` Checking social elements
+## `TC-03` Checking social elements visibility and href attribute
 1. **Given** the https://getbootstrap.com/docs/5.0/components/dropdowns/ URL is opened
 2. **Then** there should be a *socialPageName* icon displayed
 3. **And** it should have a {href} attribure with value: *socialPageURL*
 
-|socialPageName|socialPageURL                         |
-|--------------|--------------------------------------|
-|GitHub        |https://github.com/twbs               |
-|Twitter       |https://twitter.com/getbootstrap      |
-|Slack         |https://bootstrap-slack.herokuapp.com/|
-|Opencollective|https://opencollective.com/bootstrap  |
+|subID|socialPageName|socialPageURL                         |
+|-----|--------------|--------------------------------------|
+|1    |GitHub        |https://github.com/twbs               |
+|2    |Twitter       |https://twitter.com/getbootstrap      |
+|3    |Slack         |https://bootstrap-slack.herokuapp.com/|
+|4    |Opencollective|https://opencollective.com/bootstrap  |
 
 
-## `TC-11#2` Checking social elements
+## `TC-04` Checking if the corresponding social page opens after left or middle mouse click
 1. **Given** the https://getbootstrap.com/docs/5.0/components/dropdowns/ URL is opened
 3. **When** the *socialPageName* icon is clicked with the *mouseAction* mouse button
 4. **Then** the *socialPageURL* should be opened on a new window
 
-|socialPageName|socialPageURL                         |mouseAction|
-|--------------|--------------------------------------|-----------|
-|GitHub        |https://github.com/twbs               |left       |
-|GitHub        |https://github.com/twbs               |middle     |
-|Twitter       |https://twitter.com/getbootstrap      |middle     |
-|Twitter       |https://twitter.com/getbootstrap      |left       |
-|Slack         |https://bootstrap-slack.herokuapp.com/|left       |
-|Slack         |https://bootstrap-slack.herokuapp.com/|middle     |
-|Opencollective|https://opencollective.com/bootstrap  |left       |
-|Opencollective|https://opencollective.com/bootstrap  |middle     |
+|subID|socialPageName|socialPageURL                         |mouseAction|
+|-----|--------------|--------------------------------------|-----------|
+|1    |GitHub        |https://github.com/twbs               |left       |
+|2    |GitHub        |https://github.com/twbs               |middle     |
+|3    |Twitter       |https://twitter.com/getbootstrap      |left       |
+|4    |Twitter       |https://twitter.com/getbootstrap      |middle     |
+|5    |Slack         |https://bootstrap-slack.herokuapp.com/|left       |
+|6    |Slack         |https://bootstrap-slack.herokuapp.com/|middle     |
+|7    |Opencollective|https://opencollective.com/bootstrap  |left       |
+|8    |Opencollective|https://opencollective.com/bootstrap  |middle     |
 
 
-## `TC-12#1` Checking search field
+## `TC-05` Checking search field visibility
 
 1. **Given** the https://getbootstrap.com/docs/5.0/components/dropdowns/ URL is opened
 1. **Then** the input field should be displayed
 
 
-## `TC-12#2` Checking search field
+## `TC-06` Search field should be empty by default
 1. **Given** the https://getbootstrap.com/docs/5.0/components/dropdowns/ URL is opened
 4. **Then** by default the input field should be empty
 
 
-## `TC-12#3` Checking search field
+## `TC-07` Search field should be visible after scrolled out of view
 
 1. **Given** the https://getbootstrap.com/docs/5.0/components/dropdowns/ URL is opened
 2. **When** the page is scrolled down by the height of the search field
 3. **Then** the search field should be still visible
 
 
-## `TC-12#4` Checking search field
+## `TC-08` Every popup item should include the given word case insetively 
 
 1. **Given** the https://getbootstrap.com/docs/5.0/components/dropdowns/ URL is opened
 2. **When** the 'config' string is eneted to the input field
@@ -166,19 +166,19 @@ Tests will be executed on:
 4. **Then** all the items appeared in the search result popup should contain the string 'config' case insetively
 
 
-## `TC-13#1` Checking dropdown button
+## `TC-09` Check if dropdown button is visible
 
 1. **Given** the https://getbootstrap.com/docs/5.0/components/dropdowns/ URL is opened
 2. **Then** the dropdown button should be displayed
 
 
-## `TC-13#2` Checking dropdown button
+## `TC-10` Check if dropdown button is clickable
 
 1. **Given** the https://getbootstrap.com/docs/5.0/components/dropdowns/ URL is opened
 2. **Then** the dropdown button should be clickable
 
 
-## `TC-13#3` Checking dropdown button
+## `TC-11` Check if dropdown subitems are visible by default
 
 1. **Given** the https://getbootstrap.com/docs/5.0/components/dropdowns/ URL is opened
 2. **Then** the dropdownItem1 should not be displayed by default
@@ -186,7 +186,7 @@ Tests will be executed on:
 4. **And** the dropdownItem3 should not be displayed by default
 
 
-## `TC-13#4` Checking dropdown button
+## `TC-12` Check if dropdown subitems are visible after clicking the Dropdown button
 
 1. **Given** the https://getbootstrap.com/docs/5.0/components/dropdowns/ URL is opened
 2. **When** the dropdown button is clicked with the left mouse button
