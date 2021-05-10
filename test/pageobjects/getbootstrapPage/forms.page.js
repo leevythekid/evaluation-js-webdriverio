@@ -10,7 +10,15 @@ class FormsPage extends Page {
     get readonlyInput() {
         return $('[placeholder="Readonly input here..."]');
     }
-
+    get formControls() {
+        return $('h2#form-controls');
+    }
+    get exampleSelect1() {
+        return $('#exampleFormControlSelect1');
+    }
+    get exampleSelect2() {
+        return $('#exampleFormControlSelect2');
+    }
     /**
      * overwrite specifc options to adapt it to page object
      */

@@ -1,3 +1,9 @@
+# Allure reporter folders
+allure-*
+
+# HTML files
+/data/*.html
+
 # Logs
 logs
 *.log

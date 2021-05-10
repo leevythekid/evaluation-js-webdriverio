@@ -1,0 +1,10 @@
+{
+    "ANGULAR_TWITTER": "https://twitter.com/angular",
+    "ANGULAR_YOUTUBE": "https://youtube.com/angular",
+    "ANGULAR_GITHUB": "https://github.com/angular/angular",
+    "BOOTSTRAP_GITHUB": "https://github.com/twbs",
+    "BOOTSTRAP_TWITTER": "https://twitter.com/getbootstrap",
+    "BOOTSTRAP_SLACK": "https://bootstrap-slack.herokuapp.com/",
+    "BOOTSTRAP_OPENCOLLECTIVE": "https://opencollective.com/bootstrap"
+    
+}
