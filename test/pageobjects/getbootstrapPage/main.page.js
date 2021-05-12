@@ -10,15 +10,9 @@ class MainPage extends Page {
         return $(`header a[href*=${elementName}]`);
     }
 
-    socialElement(socialElementName) {
-        return $(`.toolbar-external-icons-container [title=${socialElementName}]`);
-    }
-
     open() {
         return super.open();
     }
-
-
 }
 
 module.exports = new MainPage();

@@ -3,7 +3,7 @@ const dropdownPage = require('../pageobjects/getbootstrapPage/dropdowns.page')
 
 describe('Header visiblility', () => {
     before(() => {
-        dropdownPage.open()
+        dropdownPage.open();
     });
 
     it('TC-01 Should be displayed by default', () => {
@@ -11,10 +11,18 @@ describe('Header visiblility', () => {
     });
 
     it('TC-02 Should not be displayed if scrolled out of view', () => {
-        const navbarSize = mainPage.navBar.getSize('height');
+        const navbarHeight = mainPage.navBar.getSize('height');
 
-        browser.execute((navbarSize) => window.scroll(0, navbarSize), navbarSize);
-        browser.pause(1000)
+        browser.execute((navbarHeight) => window.scroll(0, navbarHeight), navbarHeight);
         expect(mainPage.navBar).not.toBeDisplayedInViewport();
+    });
+
+    it('TC-03 Should be displayed if scroll to the very top', () => {
+        dropdownPage.overviewSubpage.scrollIntoView();
+
+        browser.execute(() => {
+            window.scroll(0, 0);
+        });
+        expect(mainPage.navBar).toBeDisplayedInViewport();
     });
 });

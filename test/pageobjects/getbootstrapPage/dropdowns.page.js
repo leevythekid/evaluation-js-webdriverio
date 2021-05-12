@@ -1,19 +1,16 @@
 const Page = require('./page');
 
 class Dropdowns extends Page {
-    get rightTable() {
-        return $$('#TableOfContents > ul > li')
-    }
     get dropdownButton() {
         return $('#dropdownMenuButton1');
     }
-    get dropdownItem1() {
+    get actionButton() {
         return $('[aria-labelledby="dropdownMenuButton1"] > li:nth-child(1)');
     }
-    get dropdownItem2() {
+    get anotherActionButton() {
         return $('[aria-labelledby="dropdownMenuButton1"] > li:nth-child(2)');
     }
-    get dropdownItem3() {
+    get somethingElseHereButton() {
         return $('[aria-labelledby="dropdownMenuButton1"] > li:nth-child(3)');
     }
     get inputField() {

@@ -99,6 +99,8 @@ Tests will be executed on:
 4. **When** 'align' string is typed into the searchbox
 5. **Then**  only elements should be visible where the value of the "data-tags" attribute contains 'align'
 
+
+
 ## `TC-01` Checking header visibility
 1. **Given** the https://getbootstrap.com/docs/5.0/components/dropdowns/ URL is opened
 2. **Then** the header should be displayed
@@ -110,7 +112,14 @@ Tests will be executed on:
 3. **Then** the header should not be displayed in viewport 
 
 
-## `TC-03` Checking social elements visibility and href attribute
+## `TC-03` Checking header visibility after scroll down then up
+1. **Given** the https://getbootstrap.com/docs/5.0/components/dropdowns/ URL is opened
+2. **When** the page is scrolled down to the dropdown button
+3. **And** the page is scrolled up
+4. **Then** the header should be displayed in viewport 
+
+
+## `TC-04` Checking social elements visibility and href attribute
 1. **Given** the https://getbootstrap.com/docs/5.0/components/dropdowns/ URL is opened
 2. **Then** there should be a *socialPageName* icon displayed
 3. **And** it should have a {href} attribure with value: *socialPageURL*
@@ -123,7 +132,7 @@ Tests will be executed on:
 |4    |Opencollective|https://opencollective.com/bootstrap  |
 
 
-## `TC-04` Checking if the corresponding social page opens after left or middle mouse click
+## `TC-05` Checking if the corresponding social page opens after left or middle mouse click
 1. **Given** the https://getbootstrap.com/docs/5.0/components/dropdowns/ URL is opened
 3. **When** the *socialPageName* icon is clicked with the *mouseAction* mouse button
 4. **Then** the *socialPageURL* should be opened on a new window
@@ -140,54 +149,47 @@ Tests will be executed on:
 |8    |Opencollective|https://opencollective.com/bootstrap  |middle     |
 
 
-## `TC-05` Checking search field visibility
-
+## `TC-06` Checking search field visibility
 1. **Given** the https://getbootstrap.com/docs/5.0/components/dropdowns/ URL is opened
 1. **Then** the input field should be displayed
 
 
-## `TC-06` Search field should be empty by default
+## `TC-07` Search field should be empty by default
 1. **Given** the https://getbootstrap.com/docs/5.0/components/dropdowns/ URL is opened
 4. **Then** by default the input field should be empty
 
 
-## `TC-07` Search field should be visible after scrolled out of view
-
+## `TC-08` Search field should be visible after scrolled out of view
 1. **Given** the https://getbootstrap.com/docs/5.0/components/dropdowns/ URL is opened
 2. **When** the page is scrolled down by the height of the search field
 3. **Then** the search field should be still visible
 
 
-## `TC-08` Every popup item should include the given word case insetively 
-
+## `TC-09` Every popup item should include the given word case insetively 
 1. **Given** the https://getbootstrap.com/docs/5.0/components/dropdowns/ URL is opened
-2. **When** the 'config' string is eneted to the input field
+2. **When** the 'config' string is entered to the input field
 3. **And** {waitForTimeout} milliseconds is waited for elements to appear in the DOM
-4. **Then** all the items appeared in the search result popup should contain the string 'config' case insetively
+4. **Then** all the items appeared in the search result popup should contain the string 'config' case insensitively
 
 
-## `TC-09` Check if dropdown button is visible
-
+## `TC-10` Check if dropdown button is visible
 1. **Given** the https://getbootstrap.com/docs/5.0/components/dropdowns/ URL is opened
 2. **Then** the dropdown button should be displayed
 
 
-## `TC-10` Check if dropdown button is clickable
-
+## `TC-11` Check if dropdown button is clickable
 1. **Given** the https://getbootstrap.com/docs/5.0/components/dropdowns/ URL is opened
 2. **Then** the dropdown button should be clickable
 
 
-## `TC-11` Check if dropdown subitems are visible by default
-
+## `TC-12` Check if dropdown subitems are visible by default
 1. **Given** the https://getbootstrap.com/docs/5.0/components/dropdowns/ URL is opened
 2. **Then** the dropdownItem1 should not be displayed by default
 3. **And** the dropdownItem2 should not be displayed by default
 4. **And** the dropdownItem3 should not be displayed by default
 
 
-## `TC-12` Check if dropdown subitems are visible after clicking the Dropdown button
-
+## `TC-13` Check if dropdown subitems are visible after clicking the Dropdown button
 1. **Given** the https://getbootstrap.com/docs/5.0/components/dropdowns/ URL is opened
 2. **When** the dropdown button is clicked with the left mouse button
 3. **Then** the dropdownItem1 should be displayed
