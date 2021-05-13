@@ -24,14 +24,14 @@ describe('Checking social elements', () => {
 });
 
 function testSocialElements(subID, siteName, expectedURL) {
-    it(`TC-04#${subID} ${siteName} icon should be displayed and have proper href value`, () => {
+    it(`TC-05#${subID} ${siteName} icon should be displayed and have proper href value`, () => {
         expect(mainPage.getSocialElement(siteName)).toBeDisplayed();
         expect(mainPage.getSocialElement(siteName)).toHaveAttribute('href', expectedURL);
     })
 }
 
 function testSocialElementsMouseAction(subID, siteName, expectedURL, mouseAction) {
-    it(`TC-05#${subID} ${siteName} icon should open the corresponding page on a new tab if clicked with ${mouseAction.button}-click`, () => {
+    it(`TC-06#${subID} ${siteName} icon should open the corresponding page on a new tab if clicked with ${mouseAction.button}-click`, () => {
         url = browser.getUrl();
         mainPage.getSocialElement(siteName).click(mouseAction);
         browser.switchWindow(expectedURL);

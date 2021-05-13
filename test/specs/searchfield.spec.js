@@ -1,16 +1,12 @@
 const dropdownsPage = require('../pageobjects/getbootstrapPage/dropdowns.page');
 const utils = require('../../utils/utils');
-const mainPage = require('../pageobjects/getbootstrapPage/main.page')
 
 describe("Search bar on dropdowns page", () => {
     before(() => {
         dropdownsPage.open();
     });
-    it('TC-06 Should be displayed', () => {
+    it('TC-07 Should be displayed and be empty by default', () => {
         expect(dropdownsPage.inputField).toBeDisplayed();
-    });
-
-    it('TC-07 Should be empty by default', () => {
         expect(dropdownsPage.inputField).toHaveValue('');
     });
 
